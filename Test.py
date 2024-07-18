@@ -48,9 +48,9 @@ def evaluate_team_performance(team_name):
     # calculates objective percentage based off the data from metrics
     win_percentage = (team_wins / total_games) * 100
     if(win_percentage > 50.00):
-        return f"Team {team_name} logistically performed better against the opposing team, with an objective score of {win_percentage:.2f}%"
+        return f"Team {team_name} outperformed the opposing team, achieving an objective score of {win_percentage:.2f}%"
     else:
-        return f"Team {team_name} logistically performed worse against the opposing team, with an objective score of {win_percentage:.2f}%"
+        return f"Team {team_name} underperformed compared to the opposing team, with an objective score of {win_percentage:.2f}%"
 
 team_name = input("Enter the name of the team: ").lower()
 
