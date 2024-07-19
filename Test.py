@@ -41,7 +41,7 @@ def evaluate_team_performance(team_name):
             
             total_games += 1
 
-    #if user inputs a country that didn't participate in the euro cup
+    # if user inputs a country that didn't participate in the euro cup
     if total_games == 0:
         return f"Team {team_name} did not play any games in the UEFA Euro Cup 2024."
     
@@ -49,8 +49,10 @@ def evaluate_team_performance(team_name):
     win_percentage = (team_wins / total_games) * 100
     if(win_percentage > 50.00):
         return f"Team {team_name} outperformed the opposing team, achieving an objective score of {win_percentage:.2f}%"
-    else:
+    elif(win_percentage < 50.00):
         return f"Team {team_name} underperformed compared to the opposing team, with an objective score of {win_percentage:.2f}%"
+    else:
+        return f"Team {team_name} performed similarly compared to the opposing team, with an objective score of {win_percentage:.2f}%"
 
 team_name = input("Enter the name of the team: ").lower()
 
